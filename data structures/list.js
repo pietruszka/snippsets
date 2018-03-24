@@ -25,7 +25,7 @@ class List {
     }
 
     includes(element) {
-        return _data.get(this).find(e=>e===element)
+        return Boolean(_data.get(this).find(e=>e===element))
     }
 
     get() {
@@ -38,4 +38,5 @@ list.append("ddd");
 list.append("ddd2");
 list.append("ddd3");
 list.insert('2',1)
+console.log(list.includes('ddd23'))
 console.log(list.get(), list.length())
